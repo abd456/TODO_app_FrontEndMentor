@@ -1,10 +1,8 @@
-
-:root{
-  --base-color:white;
-  --bg-container:white;
-  --font-color:hsl(236, 9%, 61%);
+:root {
+  --base-color: white;
+  --bg-container: white;
+  --font-color: hsl(236, 9%, 61%);
   --bg-image: url("./images/bg-desktop-light.jpg");
-
 }
 
 .dark-mode {
@@ -12,7 +10,6 @@
   --bg-container: #25273c;
   --font-color: #cacde8;
   --bg-image: url("./images/bg-desktop-dark.jpg");
-  
 }
 
 body {
@@ -24,11 +21,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 70px   20px 0 20px;
+  padding: 70px 0 0 0;
 }
 
 .container {
-  width: 100%;
+  width: 90%;
   max-width: 540px;
   margin: 0 auto;
 }
@@ -50,7 +47,7 @@ body {
 }
 
 .switch-theme {
-  height:50px;
+  height: 50px;
   width: 50px;
   padding: 0;
   border-radius: 50%;
@@ -113,7 +110,7 @@ body {
 }
 
 .todo-item p {
-  color:var(--font-color);
+  color: var(--font-color);
   margin: 0;
   flex-grow: 1;
   font-size: clamp(14px, 3vw, 18px);
@@ -121,7 +118,7 @@ body {
 }
 
 .todo-item.completed p {
-  color:rgb(101, 105, 136);
+  color: rgb(101, 105, 136);
   text-decoration: line-through;
 }
 
@@ -168,9 +165,13 @@ body {
   gap: 16px;
 }
 
-.items-left { grid-area: count; }
-.clear-completed { grid-area: clear; }
-.filters { 
+.items-left {
+  grid-area: count;
+}
+.clear-completed {
+  grid-area: clear;
+}
+.filters {
   grid-area: filters;
   justify-content: center;
 }
@@ -246,14 +247,13 @@ body {
   .delete-todo {
     opacity: 0;
   }
-  
+
   .todo-item:hover .delete-todo {
     opacity: 1;
   }
 
-  .control { 
-     grid-template-areas:
-    "count filters filters clear" ;
+  .control {
+    grid-template-areas: "count filters filters clear";
     display: grid;
     /* flex-direction: row; */
   }
